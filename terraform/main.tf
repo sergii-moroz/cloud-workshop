@@ -12,7 +12,7 @@ provider "openstack" {
 	auth_url	= var.auth_url
 	user_name	= var.admin_name
 	password	= var.admin_password
-	tenant_name	= var.tenant_name
+	tenant_name	= var.admin_tenant_name
 }
 
 # k8s-cluster provider (aliased)
