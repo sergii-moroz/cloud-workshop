@@ -17,7 +17,7 @@ provider "openstack" {
 
 # k8s-cluster provider (aliased)
 provider "openstack" {
-	alias			= var.user_project_name
+	alias			= "user_provider"
 	auth_url	= var.auth_url
 	user_name	= openstack_identity_user_v3.k8s_user.name
 	password	= openstack_identity_user_v3.k8s_user.password
