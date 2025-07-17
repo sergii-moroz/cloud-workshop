@@ -14,7 +14,7 @@ variable "admin_password" {
 	default = "password"
 }
 
-variable "admin_tennant_name" {
+variable "admin_tenant_name" {
 	type		= string
 	default = "admin"
 }
@@ -30,7 +30,7 @@ variable "user_password" {
 	default = "password"
 }
 
-variable "user_tennant_name" {
+variable "user_tenant_name" {
 	type		= string
 	default	= "k8s-cluster"
 }
