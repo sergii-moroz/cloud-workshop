@@ -4,6 +4,10 @@ terraform {
 			source = "terraform-provider-openstack/openstack"
 			version = "~> 1.52.1"
 		}
+		local = {
+			source = "hashicorp/local"
+      		version = "~> 2.4"
+		}
 	}
 }
 
