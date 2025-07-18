@@ -6,11 +6,11 @@ resource "openstack_compute_instance_v2" "k8s_control" {
 	# flavor_name			= "m1.medium"
 	image_name			= "cirros-0.6.3-x86_64-disk"
 	flavor_name			= "cirros256"
-	# key_pair				= openstack_compute_keypair_v2.k8s_key.name
+	key_pair				= openstack_compute_keypair_v2.k8s_key.name
 	security_groups	= ["k8s-sg"]
 
 	network {
-		name = "k8s-network"
+		name = openstack_networking_network_v2.k8s_network.name
 	}
 
 	# user_data = <<-EOF
@@ -27,11 +27,11 @@ resource "openstack_compute_instance_v2" "k8s_worker_1" {
 	# flavor_name			= "m1.medium"
 	image_name			= "cirros-0.6.3-x86_64-disk"
 	flavor_name			= "cirros256"
-	# key_pair				= openstack_compute_keypair_v2.k8s_key.name
+	key_pair				= openstack_compute_keypair_v2.k8s_key.name
 	security_groups	= ["k8s-sg"]
 
 	network {
-		name = "k8s-network"
+		name = openstack_networking_network_v2.k8s_network.name
 	}
 
 	# user_data = <<-EOF
