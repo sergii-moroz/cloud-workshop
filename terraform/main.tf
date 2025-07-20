@@ -28,3 +28,12 @@ provider "openstack" {
 	password	= openstack_identity_user_v3.k8s_user.password
 	tenant_name	= openstack_identity_project_v3.k8s_cluster.name
 }
+
+# provider "helm" {
+# 	kubernetes {
+# 		host =
+# 		client_certificate =
+# 		client_key =
+# 		cluster_ca_certificate =
+# 	}
+# }

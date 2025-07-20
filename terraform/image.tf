@@ -2,7 +2,7 @@
 resource "openstack_images_image_v2" "ubuntu_22_04_cloud" {
 	provider					= openstack.admin
 	name							= "ubuntu-22.04-cloud"
-	local_file_path		= "../../images/jammy-server-cloudimg-amd64.img"
+	local_file_path		= pathexpand("~/images/jammy-server-cloudimg-amd64.img")
 	disk_format				= "qcow2"
 	container_format	= "bare"
 	visibility				= "public"

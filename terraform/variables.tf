@@ -34,3 +34,9 @@ variable "user_tenant_name" {
 	type		= string
 	default	= "k8s-cluster"
 }
+
+#
+variable "worker_nodes_count" {
+	type		= number
+	default	= 1
+}
